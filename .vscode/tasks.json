@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                // "/DWIN32_LEAN_AND_MEAN",
+                // "/DNOMINMAX",
+                // "/DSTRICT",
+                // "/DSTRICT_TYPED_ITEMIDS",
+                "/Zi",
+                "/Ot",
+                "/EHsc",
+                // "\"${workspaceFolder}\\src\\*.cpp\"",
+                "\"${workspaceFolder}\\src\\main.cpp\"",
+                // "\"${workspaceFolder}\\src\\ReceiveProcess.cpp\"",
+                // "\"${workspaceFolder}\\src\\TcpListener.cpp\"",
+                // "\"${workspaceFolder}\\src\\TcpReceiver.cpp\"",
+                "/nologo",
+                "/Fe${workspaceFolder}\\DataReceiver.exe",
+                // "/link",
+				// "/LIBPATH:C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x86"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build",
+            "detail": "compiler: cl.exe"
+        },
+        {
+            "type": "cppbuild",
+            "label": "debug build",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/Od",
+                "/EHsc",
+                "\"${workspaceFolder}\\*.cpp\"",
+                "/nologo",
+                "/Fe${workspaceFolder}\\DataReceiver.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build",
+            "detail": "compiler: cl.exe"
+        },
+    ]
+}
